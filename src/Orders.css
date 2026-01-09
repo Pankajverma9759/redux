@@ -1,0 +1,219 @@
+/* ===== Page Layout ===== */
+.orders-page {
+  max-width: 1000px;
+  margin: 120px auto 40px;
+  padding: 0 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.orders-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #508adb;
+  font-size: 30px;
+}
+
+/* ===== Empty Orders ===== */
+.empty-orders {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 2rem;
+  color: #888;
+}
+
+/* ===== Order Card ===== */
+.order-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Order Info ===== */
+.order-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.order-card strong {
+  color: #111;
+}
+
+/* ===== Items Section ===== */
+.order-items {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+/* ===== Single Item ===== */
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f5f5f5;
+}
+
+.order-item div p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+/* Order Header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Delete Button */
+.delete-order-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-order-btn:hover {
+  background: #d9363e;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .delete-order-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* POPUP OVERLAY */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* POPUP BOX */
+.popup-box {
+  background: #fff;
+  padding: 25px;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 12px;
+  text-align: center;
+  animation: scaleIn 0.2s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ACTION BUTTONS */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  background: #ddd;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #d9363e;
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .orders-page {
+    margin-top: 100px;
+  }
+
+  .order-card {
+    padding: 14px;
+  }
+
+  .order-item {
+    gap: 10px;
+  }
+
+  .order-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .order-card p {
+    font-size: 13px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .orders-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .empty-orders {
+    font-size: 1.5rem;
+  }
+
+  .order-item {
+    flex-direction: row;
+  }
+}

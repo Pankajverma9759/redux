@@ -1,0 +1,88 @@
+/* ===== Auth Form Container ===== */
+.auth-box {
+  max-width: 400px;
+  width: 90%;
+  margin: 120px auto 50px auto; /* Header ke neeche space */
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* ===== Form Heading ===== */
+.auth-box h2 {
+  font-size: 2rem;
+  color: #1890ff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ===== Input Fields ===== */
+.auth-box input,
+.auth-box textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s ease;
+}
+
+.auth-box input:focus,
+.auth-box textarea:focus {
+  outline: none;
+  border: 1px solid #1890ff;
+  box-shadow: 0 0 5px rgba(24, 144, 255, 0.3);
+}
+
+/* ===== Buttons ===== */
+.auth-box button {
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #1890ff;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.auth-box button:hover {
+  background-color: #40a9ff;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+  .auth-box {
+    margin-top: 100px;
+    padding: 25px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-box {
+    margin-top: 80px;
+    padding: 20px 15px;
+  }
+
+  .auth-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .auth-box input,
+  .auth-box textarea {
+    font-size: 0.95rem;
+  }
+
+  .auth-box button {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}
