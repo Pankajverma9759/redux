@@ -6,6 +6,7 @@ import { placeOrder as placeOrderAction } from "./redux/orderSlice";
 
 import { FaMoneyBillWave, FaCreditCard, FaGooglePay } from "react-icons/fa";
 import { SiPaytm, SiPhonepe } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 export default function CartList() {
   const dispatch = useDispatch();
@@ -39,9 +40,15 @@ export default function CartList() {
     0
   );
 
-  // Empty Cart
   if (cartItems.length === 0) {
-    return <h2 className="empty-cart">🛒 Cart is Empty</h2>;
+    return (
+      <div className="empty-cart-wrapper">
+        <h2 className="empty-cart">🛒 Cart is Empty</h2>
+        <Link to="/my-order" className="go-order-link">
+          Go to My Order
+        </Link>
+      </div>
+    );
   }
 
   // PLACE ORDER
@@ -126,27 +133,47 @@ export default function CartList() {
         <h3>Payment Method</h3>
 
         <label>
-          <input type="radio" name="pay" onChange={() => setPaymentMethod("UPI")} />
+          <input
+            type="radio"
+            name="pay"
+            onChange={() => setPaymentMethod("UPI")}
+          />
           <FaGooglePay /> UPI
         </label>
 
         <label>
-          <input type="radio" name="pay" onChange={() => setPaymentMethod("PhonePe")} />
+          <input
+            type="radio"
+            name="pay"
+            onChange={() => setPaymentMethod("PhonePe")}
+          />
           <SiPhonepe /> PhonePe
         </label>
 
         <label>
-          <input type="radio" name="pay" onChange={() => setPaymentMethod("Paytm")} />
+          <input
+            type="radio"
+            name="pay"
+            onChange={() => setPaymentMethod("Paytm")}
+          />
           <SiPaytm /> Paytm
         </label>
 
         <label>
-          <input type="radio" name="pay" onChange={() => setPaymentMethod("Card")} />
+          <input
+            type="radio"
+            name="pay"
+            onChange={() => setPaymentMethod("Card")}
+          />
           <FaCreditCard /> Card
         </label>
 
         <label>
-          <input type="radio" name="pay" onChange={() => setPaymentMethod("COD")} />
+          <input
+            type="radio"
+            name="pay"
+            onChange={() => setPaymentMethod("COD")}
+          />
           <FaMoneyBillWave /> Cash on Delivery
         </label>
       </div>

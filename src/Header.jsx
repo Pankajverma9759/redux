@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AddToCart from "./AddToCart";
+
 //import "./App.css";
 import './index.css';
 export default function Header() {

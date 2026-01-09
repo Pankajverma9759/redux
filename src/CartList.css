@@ -176,3 +176,21 @@
 .paytm {
   color: #00b9f1;
 }
+.empty-cart-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.go-order-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #508abd;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.go-order-link:hover {
+  background: #1f4273;
+}
