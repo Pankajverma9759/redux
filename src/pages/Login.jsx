@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 //import { loginSuccess } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
-import '../css/login.css';
+import "../CSS/Login.css";
+
 export default function Login() {
   const [form, setForm] = useState({});
   const dispatch = useDispatch();
